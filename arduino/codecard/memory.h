@@ -44,7 +44,7 @@ String getFromMemory(String key) {
 
 void saveToMemory(int addr, String val) {
   char arrayToStore[100];
-  val.toCharArray(arrayToStore, val.length()+1) ;
+  val.toCharArray(arrayToStore, 100) ;
   EEPROM.put(addr*maxValue, arrayToStore);
   EEPROM.commit();
 }
